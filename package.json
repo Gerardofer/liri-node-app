@@ -1,0 +1,26 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "User assitant that delivers content through language interpretation",
+  "main": "liri",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gerardofer/liri-node-app.git"
+  },
+  "author": "Gerardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gerardofer/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/Gerardofer/liri-node-app#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "node": "^9.4.0",
+    "require-config": "^0.1.2",
+    "spotify": "^0.3.0",
+    "twitter": "^1.7.1"
+  }
+}
