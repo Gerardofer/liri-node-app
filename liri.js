@@ -1,8 +1,7 @@
 const movie = require("./imdb");
 const twitter = require('./twitter');
-const fs = require('fs');
 const spotify = require('./spotify');
-
+const fs = require('fs');
 // const command = fs.readFileSync("random.txt");
 
 // console.log(command);
