@@ -1,16 +1,24 @@
 require('dotenv').config();
 var keys = require('./keys');
+var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
-// var Spotify = require('spotify');
-var https = require('https');
 
-console.log(keys.spotify.secret);
-console.log(keys.spotify.id);
+// const userInput = process.argv[2];
 
-spotify.search({type: 'artist', query: "U2"}, (error, data) => {
-	if (error){
-		console.log(error);
-	}
-	console.log(data);
-})
+function getSong (query) {
+
+	spotify.search({ type: 'track', query: query }, function(err, data) {
+	  if (err) {
+	    return console.log('Error occurred: ' + err);
+	  }
+
+	console.log("Artist Name:", data.tracks.items[0].artists[0].name); 
+	console.log("Track Name:", data.tracks.items[0].name);
+	console.log("URL Preview", data.tracks.items[0].artists[0].external_urls);
+	console.log("Album:", data.tracks.items[0].album.name)
+
+	});
+}
+
+module.exports.get = getSong;
 
