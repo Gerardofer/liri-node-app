@@ -6,11 +6,11 @@ var client = new Twitter(keys.twitter);
 
 //===========================================================================
 //Twitter
-var findTweet = function (query){
+var findTweet = function (){
 
-	var userID = {screen_name: query};
+	var userID = {screen_name: "guaicapuro4"};
 
-	client.get('statuses/user_timeline', userID.screen_name, function (error, tweets, response){
+	client.get('statuses/user_timeline', userID, function (error, tweets, response){
 		if (error){
 			console.log(error);
 		}
