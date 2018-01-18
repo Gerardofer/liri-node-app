@@ -11,7 +11,6 @@ function imdbRequest(query){
 			response.on('end', () => {
 				try {
 					body = JSON.parse(body);
-					// console.log(body);
 					console.log("==============================================================");
 					console.log(body.Title);
 					console.log("-------------------------------------------");
@@ -32,7 +31,6 @@ function imdbRequest(query){
 					console.log("Language: ", body.Language);
 					console.log("-------------------------------------------");
 					console.log("Plot: ", body.Plot);
-					// printMessage(body.Title, body.Year, body.Ratings[0].Value, body.Released, body.Actors, body.Country, body.Language, body.Plot);
 				} catch (error) {
 					console.error("Seems we", error.message);
 				}
@@ -44,4 +42,3 @@ function imdbRequest(query){
 }
 
 module.exports.get = imdbRequest;
-// imdbRequest("the godfather");

@@ -5,6 +5,7 @@ const fs = require('fs');
 const userInput = process.argv[2];
 let queryLiri = process.argv[3];
 
+let doWhatItSays = fs.readFileSync("random.txt").toString().split(",");
 
 if (userInput == "spotify-this-song"){
 	if (queryLiri == undefined) {
@@ -32,19 +33,6 @@ else if (userInput == "movie-this"){
 	}
 }
 
-
-
-
-
-
-
-// const command = fs.readFileSync("random.txt");
-// console.log(command);
-
-// const queryMovie = process.argv.slice(2)
-// movie.get(queryMovie);
-
-// const queryTwitter = process.argv.slice(2);
-// twitter.findTweet(queryTwitter);
-
-// spotify.get(querySpotify);
+else if (userInput == "do-what-it-says"){
+	spotify.get(doWhatItSays[1]);
+};
