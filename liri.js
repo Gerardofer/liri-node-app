@@ -15,8 +15,21 @@ if (userInput == "spotify-this-song"){
 	else {
 		spotify.get(queryLiri);
 	}
-}else if (userInput == "my-tweets"){
-	twitter.findTweet()
+}
+
+else if (userInput == "my-tweets"){
+	twitter.findTweet();
+}
+
+else if (userInput == "movie-this"){
+	if (queryLiri == undefined){
+		console.log("WE HAVE SELECTED 'Space Odyssey'")
+		queryLiri = "Space Odyssey";
+		movie.get(queryLiri);
+	}
+	else {
+		movie.get(queryLiri);
+	}
 }
 
 

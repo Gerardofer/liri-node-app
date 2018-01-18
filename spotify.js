@@ -11,8 +11,6 @@ function getSong (query) {
 	    return console.log('Error occurred: ' + err);
 	  }
 	  let songData = data.tracks.items
-	  
-	  // console.log(songData.length)
 
 	  songData.forEach(function(track){
 	  	console.log("=============================================");
@@ -22,12 +20,8 @@ function getSong (query) {
 	  	console.log("Album Name: ", track.album.name);
 	  	console.log("Preview URL: ", track.preview_url);
 	  })
-
-	  // printSong(data.tracks.items[0].artists[0].name, data.tracks.items[0].name, data.tracks.items[0].artists[0].external_urls.spotify, data.tracks.items[0].album.name)
-
-	// console.log("URL Preview", data.tracks.items[0].artists[0].external_urls.spotify);
 	});
 }
 
 module.exports.get = getSong;
-// getSong("with or without you")
+
